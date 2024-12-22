@@ -26,85 +26,7 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 ```
-admin.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            background-image: url('bg1.jpg'); 
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            background-attachment: fixed; 
-        }
-        header { 
-            background: rgba(0, 0, 0, 0.7); 
-            color: rgb(133, 131, 131); 
-            padding: 10px; 
-            text-align: center; 
-        }
-        nav a { 
-            color: white; 
-            margin: 0 15px; 
-            text-decoration: none; 
-        }
-        nav a:hover { 
-            text-decoration: underline; 
-        }
-        main { 
-            text-align: center; 
-            padding: 20px; 
-            background: rgba(255, 255, 255, 0.8); 
-            margin: 50px auto;
-            max-width: 600px;
-            border-radius: 10px;
-        }
-        footer { 
-            background: rgba(0, 0, 0, 0.7); 
-            color: white; 
-            text-align: center; 
-            padding: 10px; 
-            position: relative; 
-            bottom: 0; 
-            width: 100%; 
-        }
-        footer p { 
-            margin: 5px 0; 
-        }
-        footer a { 
-            color: lightblue; 
-            text-decoration: none; 
-        }
-        footer a:hover { 
-            text-decoration: underline; 
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="admin.html">admin</a>
-            <a href="image.html">image</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <h1>Welcome to my Image Gallery</h1>
-        <p>Every picture tells a story , and every story begins here.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Designed and Developed by SHARMILA P</p>
-            </footer>
-</body>
-</html>
-
-image.html
+image .html
 
 <!DOCTYPE html>
 <html lang="en">
@@ -232,194 +154,38 @@ image.html
 </body>
 </html>
 
-about.html
+image.js
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background: #9c5d5d;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            flex: 1; /* Ensures main content stretches to push footer to the bottom */
-            padding: 20px;
-            text-align: center;
-        }
-        main .content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        footer {
-            background: #0e0e0e;
-            color: rgb(184, 180, 180);
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-        }
-        footer a {
-            color: lightblue;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="admin.html">admin</a>
-            <a href="image.html">image</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <h1><u>About Us</u></h1>
-        <div class="content">
-            <p><p style="font-size: 20px;"><b>Welcome to our interactive image gallery , where every picture tells a story .</b></p></p> 
-            <p><p style="font-size:16px;"><i>Our mission is to provide a visual journey that inspires, uplifts and connect people through the universal language of imagery. From breathtaking landscapes to intricate details of everyday life, our gallery is a celebration of beauty in all its forms. </p>
-            <p><i>Thank you for stepping into our world of stories and prespectives.</i></p></p>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Designed and Developed by SHARMILA P</p>
-    </footer>
-</body>
-</html>
+const galleryImages = document.querySelectorAll('.gallery-img');
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+const closeBtn = document.querySelector('.close-btn');
 
-contact.html
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            flex: 1; 
-            padding: 20px;
-            text-align: center;
-        }
-        main form {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        form label {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        form button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        form button:hover {
-            background: #555;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-        }
-        footer a {
-            color: lightblue;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="admin.html">admin</a>
-            <a href="image.html">image</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <h1>Contact Us</h1>
-        <section class="contact">
-        <h2>Get in Touch</h2>
-        <p><strong><p style="font-size: 20px;">Website Handeled By:</strong> SHARMILA P</p></p>
-        <p><strong><p style="font-size: 20px;">Phone:</strong> 7654987654</p></p>
-        <p><strong><p style="font-size: 20px;">Email:</strong> higallery@gmail.com</p></p>
-    </section>
+galleryImages.forEach(image => {
+  image.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    modalImg.src = image.src;
+    modalImg.alt = image.alt;
+  });
+});
 
-            </main>
-    <footer>
-        <p>&copy; 2024  Designed and Developed by  SHARMILA P</p>  
- </footer>
-</body>
-</html>
+
+closeBtn.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && modal.style.display === 'flex') {
+    closeModal();
+  }
+});
+
+function closeModal() {
+  modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
+  modalImg.src = '';
+  modalImg.alt = '';
+}
 ```
 ## OUTPUT:
 
