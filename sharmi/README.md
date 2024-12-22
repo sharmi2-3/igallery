@@ -1,5 +1,5 @@
 cd # Ex.08 Design of Interactive Image Gallery
-## Date:18.12.2024
+## Date:22.12.2024
 
 ## AIM:
 To design a web application for an inteactive image gallery with minimum five images.
@@ -26,6 +26,7 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 ```
+image.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
