@@ -26,8 +26,6 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 ```
-image .html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,20 +41,6 @@ image .html
             flex-direction: column;
             min-height: 100vh;
         }
-        header {
-            background: #9c7373;
-            color: rgb(179, 106, 106);
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
         main {
             flex: 1; /* Ensures main content stretches to push footer to the bottom */
             padding: 20px;
@@ -69,7 +53,7 @@ image .html
             padding: 20px;
         }
         .photo {
-            background: rgb(240, 238, 238);
+            background: rgb(201, 197, 197);
             border: 1px solid #080808;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -89,12 +73,12 @@ image .html
         }
         .photo-description {
             font-size: 14px;
-            color: #f7f6f6;
+            color: #3c0d0d;
             margin: 0 10px 10px;
         }
         footer {
-            background: #333;
-            color: rgb(191, 187, 187);
+            background: #965151;
+            color: rgb(14, 14, 14);
             text-align: center;
             padding: 10px;
             width: 100%;
@@ -110,16 +94,8 @@ image .html
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="admin.html">admin</a>
-            <a href="image.html">image</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
     <main>
-        <h1 style="text-align: center; margin: 20px 0;">Photo Gallery</h1>
+        <h1 style="text-align: center; margin: 20px 0;">Image Gallery</h1>
         <div class="gallery">
                 <div class="photo">
                 <img src="waterfall.jpg" alt="waterfall">
@@ -142,8 +118,8 @@ image .html
                 <p>dogy</p>
                 </div>
                 <div class="photo">
-                <img src="bird.jpg" alt="bird">
-                <p>bird</p>
+                <img src="anil.jpg" alt="anil">
+                <p>anil</p>
                 </div>
 
                         </div>
@@ -156,29 +132,30 @@ image .html
 
 image.js
 
-const galleryImages = document.querySelectorAll('.gallery-img');
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const closeBtn = document.querySelector('.close-btn');
-
+const galleryImages = document.querySelectorAll('.gallery img');
+const modal = document.getElementById('image-modal');
+const modalImg = document.getElementById('modal-image');
+const closeBtn = document.getElementById('close-modal');
 
 galleryImages.forEach(image => {
   image.addEventListener('click', () => {
-    modal.style.display = 'flex';
+
+    modal.style.display = 'block';
     modal.setAttribute('aria-hidden', 'false');
+    
     modalImg.src = image.src;
     modalImg.alt = image.alt;
   });
 });
 
-
 closeBtn.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && modal.style.display === 'flex') {
+  if (event.key === 'Escape' && modal.style.display === 'block') {
     closeModal();
   }
 });
+
 
 function closeModal() {
   modal.style.display = 'none';
@@ -187,13 +164,9 @@ function closeModal() {
   modalImg.alt = '';
 }
 ```
+
 ## OUTPUT:
-
-![alt text](1.png)
-![alt text](2.png)
-![alt text](3.png)
-![alt text](4.png)
-
+![alt text](../1.png)
 
 ## RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
